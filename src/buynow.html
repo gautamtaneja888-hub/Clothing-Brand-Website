@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Buy Now</title>
+
+  <!-- SAME FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #111;
+    }
+
+    /* NAVBAR SAME STYLE */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      align-items: center;
+      background: white;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    /* MAIN SECTION */
+    .construction {
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .construction h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .construction p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    /* LINE ANIMATION */
+    .line {
+      width: 60px;
+      height: 2px;
+      background: black;
+      margin: 20px auto;
+      animation: expand 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes expand {
+      from { width: 40px; }
+      to { width: 100px; }
+    }
+
+    /* BUTTON */
+    .btn {
+      padding: 12px 30px;
+      border: 1px solid black;
+      background: transparent;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: black;
+      color: white;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">House of Vanshika</div>
+  </nav>
+
+  <!-- MAIN -->
+  <section class="construction">
+    <h1>Page Under Construction</h1>
+    <div class="line"></div>
+    <p>We’re preparing something beautiful for you.  
+    This feature will be available very soon.</p>
+
+    <button class="btn" onclick="goBack()">Back to Shop</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2026 House of Vanshika. All rights reserved.
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+</body>
+</html>
