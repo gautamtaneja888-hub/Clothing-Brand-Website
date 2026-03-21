@@ -249,44 +249,84 @@ body {
 }
 
 
-/* OFFER SECTION */
+
+
+
+
+/* offer section */
+
+
 .offer {
-  width: 92%;
-  margin: 60px auto;
-  border-radius: 25px;
+  width: 100%;
   background: #000;
+  overflow: hidden;
+  padding: 12px 0;
+  position: relative;
+}
+
+/* Gradient fade edges (premium feel) */
+.offer::before,
+.offer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+}
+
+.offer::before {
+  left: 0;
+  background: linear-gradient(to right, #000, transparent);
+}
+
+.offer::after {
+  right: 0;
+  background: linear-gradient(to left, #000, transparent);
+}
+
+/* Track */
+.offer-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 15s linear infinite;
+}
+
+/* Content */
+.offer-content {
+  display: flex;
+  gap: 40px;
+  padding-right: 40px;
+}
+
+/* Text style */
+.offer span {
   color: #fff;
-  text-align: center;
-  padding: 60px 20px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: 0.3s;
 }
 
-.offer h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  margin-bottom: 10px;
+/* Hover effect */
+.offer span:hover {
+  color: #aaa;
+  cursor: pointer;
 }
 
-.offer p {
-  margin-bottom: 20px;
-  color: #ccc;
-}
-
-.offer .btn {
-  background: #fff;
-  color: #000;
-}
-
-.offer .btn:hover {
-  background: #ddd;
-}
-
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  .features {
-    flex-direction: column;
+/* Smooth infinite animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
+
+
+
+
 
 
 /* FOOTER */
